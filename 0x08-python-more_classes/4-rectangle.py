@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """Defines a Rectangle class."""
 
 class Rectangle:
@@ -14,10 +14,12 @@ class Rectangle:
         self.width = width
         self.height = height
 
+
     @property
     def width(self):
         """Get/set the width of the Rectangle."""
         return self.__width
+
 
     @width.setter
     def width(self, value):
@@ -35,6 +37,7 @@ class Rectangle:
     @height.setter
     def height(self, value):
         if not isinstance(value, int):
+
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
@@ -43,6 +46,7 @@ class Rectangle:
     def area(self):
         """Return the area of the Rectangle."""
         return (self.__width * self.__height)
+
 
     def perimeter(self):
         """Return the perimeter of the Rectangle."""
