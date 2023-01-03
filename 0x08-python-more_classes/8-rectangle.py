@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """Defines a Rectangle class."""
 
-
 class Rectangle:
     """Represent a rectangle.
 
@@ -13,14 +12,12 @@ class Rectangle:
     number_of_instances = 0
     print_symbol = "#"
 
-
     def __init__(self, width=0, height=0):
         """Initialize a new Rectangle.
 
-
         Args:
             width (int): The width of the new rectangle.
-            height (int): The height of the new rectangle
+            height (int): The height of the new rectangle.
         """
         type(self).number_of_instances += 1
         self.width = width
@@ -39,7 +36,7 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         self.__width = value
 
-    @propert
+    @property
     def height(self):
         """Get/set the height of the Rectangle."""
         return self.__height
@@ -74,7 +71,7 @@ class Rectangle:
         """
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
-        if not isinstance(rect_2, Rectangle)
+        if not isinstance(rect_2, Rectangle):
             raise TypeError("rect_2 must be an instance of Rectangle")
         if rect_1.area() >= rect_2.area():
             return (rect_1)
@@ -88,7 +85,6 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return ("")
 
-
         rect = []
         for i in range(self.__height):
             [rect.append(str(self.print_symbol)) for j in range(self.__width)]
@@ -96,7 +92,9 @@ class Rectangle:
                 rect.append("\n")
         return ("".join(rect))
 
+
     def __repr__(self):
+
         """Return the string representation of the Rectangle."""
         rect = "Rectangle(" + str(self.__width)
         rect += ", " + str(self.__height) + ")"
